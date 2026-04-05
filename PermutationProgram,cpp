@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+// Function to calculate factorial
+int factorial(int num) {
+    int fact = 1;
+
+    for(int i = 1; i <= num; i++) {
+        fact *= i; // multiplying numbers
+    }
+
+    return fact;
+}
+
+int main() {
+    int n, r, result;
+
+    // User input
+    cout << "Enter value of n: ";
+    cin >> n;
+
+    cout << "Enter value of r: ";
+    cin >> r;
+
+    // Permutation formula
+    result = factorial(n) / factorial(n - r);
+
+    // Output
+    cout << "Permutation P(" << n << "," << r << ") = " << result;
+
+    return 0;
+}
